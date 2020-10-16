@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Aplicació de Lego</string>
+    <string name="btn_search">Buscar</string>
+    <string name="btn_settings">Configurar</string>
+    <string name="btn_register">Registrar</string>
+    <string name="lbl_settings">Configuración</string>
+    <string name="chk_filter_by_year">Filtrar por año</string>
+    <string name="lbl_from_year">Desde el año</string>
+    <string name="lbl_to_year">Hasta el año</string>
+    <string name="chk_filter_by_parts">Filtrar por partes</string>
+    <string name="lbl_minimum_parts">Partes mínimas</string>
+    <string name="lbl_maximum_parts">Partes máximas</string>
+    <string name="tokenInput">" Vaya a la página web rebrickable y obtenga su token de clave API y utilícelo aquí:"</string>
+    <string name="token">Token de entrada</string>
+    <string name="registerText">Tienes que introductir el token de usuario para poder utilizar la aplicación</string>
+    <string name="enterToken">Introducir Token</string>
+    <string name="dismiss">Descartar</string>
+</resources>

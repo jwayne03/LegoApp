@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Aplicación de Lego</string>
+    <string name="btn_search">Buscar</string>
+    <string name="btn_settings">Configura</string>
+    <string name="btn_register">Registrat</string>
+    <string name="lbl_settings">Configuració</string>
+    <string name="chk_filter_by_year">Filtrar per any</string>
+    <string name="lbl_from_year">Des de l\'any</string>
+    <string name="lbl_to_year">Fins l\'any</string>
+    <string name="chk_filter_by_parts">Filtrar per parts</string>
+    <string name="lbl_minimum_parts">Parts mínims</string>
+    <string name="lbl_maximum_parts">Parts máxims</string>
+    <string name="token">Testimoni d\'entrada</string>
+    <string name="tokenInput">Aneu a la pàgina web rebrickable i obteniu el vostre testimoni de clau API i utilitzeu-lo aquí:</string>
+    <string name="registerText">Tens que introduir el teu token d\'usuari per poder utilitzar l\'aplicació</string>
+    <string name="enterToken">Introduir Testimoni</string>
+    <string name="dismiss">Descarta</string>
+</resources>
