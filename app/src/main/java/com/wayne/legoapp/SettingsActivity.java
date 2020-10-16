@@ -20,7 +20,7 @@ public class SettingsActivity extends AppCompatActivity {
     public static final int MIN_YEAR = 1960;
 
     // Tick values for the "parts" SeekBars
-    public static final int[] TICK_VALUES = new int[] {
+    public static final int[] TICK_VALUES = new int[]{
             0, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000, 50000, 100000
     };
 
@@ -72,27 +72,41 @@ public class SettingsActivity extends AppCompatActivity {
         });
         // Listener for changes in the "From year" SeekBar
         sbFromYear.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 // Avoid having the two SeekBars with inverted order
                 if (progress > sbToYear.getProgress()) {
                     sbToYear.setProgress(progress);
                 }
                 updateYearViews(true);
             }
-            @Override public void onStartTrackingTouch(SeekBar seekBar) { }
-            @Override public void onStopTrackingTouch(SeekBar seekBar) { }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
         });
         // Listener for changes in the "To year" SeekBar
         sbToYear.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 // Avoid having the two SeekBars with inverted order
                 if (progress < sbFromYear.getProgress()) {
                     sbFromYear.setProgress(progress);
                 }
                 updateYearViews(true);
             }
-            @Override public void onStartTrackingTouch(SeekBar seekBar) { }
-            @Override public void onStopTrackingTouch(SeekBar seekBar) { }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
         });
 
         // When the switch "Filter by parts" is checked or unchecked, update the views below
@@ -104,27 +118,41 @@ public class SettingsActivity extends AppCompatActivity {
         });
         // Listener for changes in the "Minimum parts" SeekBar
         sbMinimumParts.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 // Avoid having the two SeekBars with inverted order
                 if (progress > sbMaximumParts.getProgress()) {
                     sbMaximumParts.setProgress(progress);
                 }
                 updatePartsViews(true);
             }
-            @Override public void onStartTrackingTouch(SeekBar seekBar) { }
-            @Override public void onStopTrackingTouch(SeekBar seekBar) { }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
         });
         // Listener for changes in the "Maximum parts" SeekBar
         sbMaximumParts.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 // Avoid having the two SeekBars with inverted order
                 if (progress < sbMinimumParts.getProgress()) {
                     sbMinimumParts.setProgress(progress);
                 }
                 updatePartsViews(true);
             }
-            @Override public void onStartTrackingTouch(SeekBar seekBar) { }
-            @Override public void onStopTrackingTouch(SeekBar seekBar) { }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
         });
 
     }
@@ -157,7 +185,7 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     private int searchTick(int value) {
-        for(int i = 0; i < TICK_VALUES.length; i++) {
+        for (int i = 0; i < TICK_VALUES.length; i++) {
             if (value == TICK_VALUES[i]) return i;
         }
         return 0;
@@ -192,12 +220,6 @@ public class SettingsActivity extends AppCompatActivity {
         groupYear.setVisibility(isChecked ? View.VISIBLE : View.GONE);
         tvFromYear.setText(String.valueOf(MIN_YEAR + sbFromYear.getProgress()));
         tvToYear.setText(String.valueOf(MIN_YEAR + sbToYear.getProgress()));
-        /* OLD CODE: views are disabled / enabled
-        sbFromYear.setEnabled(isChecked);
-        sbToYear.setEnabled(isChecked);
-        tvFromYear.setText(isChecked ? String.valueOf(MIN_YEAR + sbFromYear.getProgress()) : "");
-        tvToYear.setText(isChecked ? String.valueOf(MIN_YEAR + sbToYear.getProgress()) : "");
-         */
     }
 
     private void updatePartsViews(boolean isChecked) {

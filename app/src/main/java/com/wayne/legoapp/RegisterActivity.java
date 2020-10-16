@@ -31,5 +31,6 @@ public class RegisterActivity extends AppCompatActivity {
                 finishAffinity();
             }
         });
+
     }
 }

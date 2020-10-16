@@ -15,4 +15,6 @@
     <string name="registerText">You must enter your user token to use the aplication</string>
     <string name="enterToken">Enter Token</string>
     <string name="dismiss">Dismiss</string>
+    <string name="chkApiKey">Check Api Key</string>
+    <string name="deleteApiKey">Delete Api Key</string>
 </resources>
